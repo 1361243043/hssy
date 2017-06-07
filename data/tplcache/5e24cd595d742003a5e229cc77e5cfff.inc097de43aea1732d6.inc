@@ -1,0 +1,7 @@
+<?php
+$z[0]=Array("typeurl","",25,41);
+$z[1]=Array("rel","",43,55);
+$z[2]=Array("typename","",56,73);
+$z[3]=Array("description","",94,114);
+
+?>

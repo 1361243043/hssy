@@ -1,0 +1,169 @@
+{dede:include filename="head.html"/}
+<!-- 导入外部头文件 -->
+		<div id="banner">
+			<div class="imgs">
+            	<p class="list"></p>
+				<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/banner.jpg" /></a>
+				<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/banner4.jpg" /></a>
+				<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/banner5.jpg" /> </a>
+			</div>
+			 <div class="ban">
+                    <div class="tel">
+                        <p class="ps">全国统一免费咨询电话<span>400-800-91</span></p>
+                        <p class="ps">客服经理服务热线<span>15853821297</span></p>
+                        <p class="ps1"><span>ADDRESS</span>贵阳金源世纪购物中心C栋1楼&amp;3楼</p>
+                    </div>
+                    <p class="pp">在线预约<span class="cheng">韩国摄影师</span>拍摄
+                    <span>
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/qq1.png" height="30" width="35" /></a>
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/qq2.png" height="30" width="35" /></a>
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/qq3.png" height="30" width="35" /></a>
+                    <a href="#"><img src="{dede:global.cfg_templets_skin/}/images/qq4.png" height="30" width="35" /></a>
+                    </span><i>if you have any question, please contact us</i>
+                    </p>
+			</div>
+		</div><!--#banner-->
+		<div id="cen">
+           
+			<div id="cens">
+				<p class="list1"></p>
+				<div class="imgs1">
+				<!--热门活动左边的动态照片 -->
+					<a><img src="{dede:global.cfg_templets_skin/}/images/img1.jpg" height="290" width="452" /></a>
+					<a><img src="{dede:global.cfg_templets_skin/}/images/img2.jpg" height="290" width="452" /></a>
+					<a><img src="{dede:global.cfg_templets_skin/}/images/img3.jpg" height="290" width="452" /></a>
+					<a><img src="{dede:global.cfg_templets_skin/}/images/img4.jpg" height="290" width="452" /></a>
+					<a><img src="{dede:global.cfg_templets_skin/}/images/img5.jpg" height="290" width="452" /></a>
+				</div>
+			</div><!--#cens-->
+			 <div id="cright">
+			 <!-- 新闻中心的内容 -->
+				<a href="plus/list.php?tid=2"><img src="{dede:global.cfg_templets_skin/}/images/con_3_right.jpg" width="520" height="42" /></a>
+				{dede:arclist orderby='pubdate' typeid='2' titlelen ='50' limit='0,3'}
+                	<dl>
+                        <dt><img src="./templets/hssy/images/time.png" height="57" width="68" /><span class="span1"><h1>[field:pubdate function=MyDate('d',@me)/]</h1>[field:pubdate function=MyDate('Y/m',@me)/]</span></dt>
+                        <dd class="dd1"><a>[field:textlink/]</a></dd>    
+                        <dd class="dd2"><a><i>[field:description/]</i></a></dd>
+                        
+                	</dl>
+                	{/dede:arclist}
+				
+			</div><!--#cright /-->
+		</div><!--#cen-->	
+		<div id="cen1">
+		<!-- 内景最新作品 -->
+        	<h1>
+				<img src="{dede:global.cfg_templets_skin/}/images/inner.jpg" width="980" height="46"/>
+            	<a href="plus/list.php?tid=6"><img src="{dede:global.cfg_templets_skin/}/images/more++.jpg" width="64" height="46" class="ig4" /></a>
+			</h1>
+			{dede:arclist  typeid='6' imgwidth='205' imgheight='180' limit='0,4'}
+			<dl>
+		         <dt>[field:imglink/]<span class="spans"><img src="./templets/hssy/images/vivs.png" height="41" width="100" /></span></dt>
+		         <dd class="dd"><a>Catherin Showcase</a></dd>
+		         <dd class="dd1">[field:textlink/]</dd>
+				<dd class="dd2"><a href='[field:typeurl/]' [field:rel/]>POST TIME<span>[field:pubdate function=MyDate('Dm,Y',@me)/]</span></a></dd>
+		    </dl> 
+		    {/dede:arclist}
+        </div><!--#cen1 /-->	
+		<div id="cen1">
+		<!-- 外景最新作品 -->
+        	<h1>
+				<img src="{dede:global.cfg_templets_skin/}/images/exter.jpg" width="980" height="46"/>
+            	<a href="plus/list.php?tid=7"><img src="{dede:global.cfg_templets_skin/}/images/more++.jpg" width="64" height="46" class="ig4" /></a>
+			</h1>
+			{dede:arclist  typeid='7' imgwidth='205' imgheight='180' limit='0,4'}
+			<dl>
+		         <dt>[field:imglink/]<span class="spans"><img src="./templets/hssy/images/vivs.png" height="41" width="100" /></span></dt>
+		         <dd class="dd"><a>Catherin Showcase</a></dd>
+		         <dd class="dd1">[field:textlink/]</dd>
+				<dd class="dd2"><a href='[field:typeurl/]' [field:rel/]>POST TIME<span>[field:pubdate function=MyDate('Dm,Y',@me)/]</span></a></dd>
+		    </dl> 
+		    {/dede:arclist}
+        </div><!--#cen1 /-->	
+		<div id="cen2">
+		<!-- 客片鉴赏 -->
+			<h1>
+				<img src="{dede:global.cfg_templets_skin/}/images/guest.jpg" width="980" height="46"/>
+            	<a href="plus/list.php?tid=7"><img src="{dede:global.cfg_templets_skin/}/images/more++.jpg" width="64" height="46" class="ig4" /></a>
+			</h1>
+			<div id="dls">
+				
+				
+				{dede:arclist  typeid='1' imgwidth='110' imgheight='116' limit='0,14'}
+				<dl>
+	         	
+	            <dt>[field:imglink/]<span class="spans"><a href='[field:typeurl/]' [field:rel/]><img src="./templets/hssy/images/vivs.png" width="100" height="41" class="imgss" /></a></span>
+	            
+	            </dt>
+                
+                </dl>
+                {/dede:arclist} 
+			</div><!--#dls /-->
+		</div><!--#cen2 /-->
+		<div id="cen3">
+			<h1>
+				<img src="{dede:global.cfg_templets_skin/}/images/service.jpg" width="980" height="46"/>
+				<a href="plus/list.php?tid=3"><img src="{dede:global.cfg_templets_skin/}/images/more++.jpg" width="64" height="46" class="ig4" /></a>
+			</h1>
+			<div class="left">
+				
+				 {dede:arclist  orderby='pubdate' typeid='3' idlist='' imgwidth='170' imgheight='89' limit='0,3' channelid='6' addfields="trueprice"}  
+				<dl class="mar">
+				<dt>[field:imglink/]</dt>
+					<dd class="dd"><a href="#">VIVI Service</a></dd>
+					<dd class="dd1"><a href="[field:arcurl/]">[field:title/]</a></dd>
+					<dd><a href="#"><span class="span">&nbsp;优惠价格:</span><span class="sp1">&yen;[field:trueprice/]元</span></a></dd>
+        		</dl>
+        		{/dede:arclist}
+			</div><!--.left /-->
+			<div class="right">
+				<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/girl.jpg" height="348" width="494" /></a>
+			</div><!--.right /-->
+		</div><!--#cen3 /-->
+		<div id="cen4">
+			<h1>
+				<img src="{dede:global.cfg_templets_skin/}/images/service.jpg" width="980" height="46"/>
+				<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/more++.jpg" width="64" height="46" class="ig4" /></a>
+			</h1>
+			<div class="new">
+            	<div class="new_left">
+                	<img src="{dede:global.cfg_templets_skin/}/images/index1.jpg" width="301" height="201" />
+            	</div><!--new_left /-->
+                <div class="new_cen">
+                	<p class="p1"><img src="{dede:global.cfg_templets_skin/}/images/newlong.jpg" width="75" height="22" /></p>
+                    <dl>
+                    	<dt><img src="{dede:global.cfg_templets_skin/}/images/guangao.jpg" width="50" height="50" /></dt>
+                        <dd><a href="#"><span class="sp1">晰薇视觉婚纱摄影</span>  <img src="{dede:global.cfg_templets_skin/}/images/blue-v.jpg" width="14" height="12" />  北京 朝阳区</a></dd>
+                        <dd class="dd1"><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/+.jpg" width="63" height="25" /></a></dd>
+                    </dl>
+                    <marquee direction="up" scrollamount="2" onmouseover="stop()" onmouseout="start()" height="70">
+						<p>
+							<a href="#">1、射手座：追求而且还勇于在朋友面前宣战。</a>
+							<a href="#">2、双子座：人生态度是“走自己的路，让人家说去吧！”。</a>
+							<a href="#">3、双鱼座：难以抑制地追逐所爱</a>
+							<a href="#">4、狮子座：面对爱情时合格外当人不让</a>
+							<a href="#">5、天枰座：速热也速冻</a>
+							<a href="#">6、天蝎座：外令内热，对待喜欢的人包容到极致</a>
+							<a href="#">7、双子座：人生态度是“走自己的路，让人家说去吧！”。</a>
+							<a href="#">8、双鱼座：难以抑制地追逐所爱</a>
+							<a href="#">9、射手座：追求而且还勇于在朋友面前宣战。</a>
+						</p>
+                    </marquee>
+                </div><!--new_cen-->
+                <div class="new_right">
+                	<img src="{dede:global.cfg_templets_skin/}/images/xun.jpg" width="83" height="33" class="ig" />
+                    <a href='plus/list.php?tid=2'><img src="{dede:global.cfg_templets_skin/}/images/red_more.jpg" width="57" height="17" class="ig1" /></a>
+                    <ul>
+                    	
+                    	{dede:arclist  orderby='pubdate' typeid='2' limit='0,5'}
+                    	<li>
+						[field:textlink/]<br/>
+						</li>
+						{/dede:arclist}
+                    	
+                    </ul>
+                </div><!--new_right /-->
+            </div>
+		</div><!--#cen4 /-->
+   {dede:include filename="footer.html"/}
+<!-- 导入外部尾部文件 -->

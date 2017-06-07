@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>轻石脑_临沂沂河石化有限公司</title>
+<meta name="keywords" content="" />
+<meta name="description" content="轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑" />
+<link href="/lyyh/templets/lyyh/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="/lyyh/templets/lyyh/style/picture.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/lyyh/include/dedeajax2.js"></script>
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/lyyh/member/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/lyyh/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/lyyh/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/lyyh/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+  var shortname = ".html";
+  var npage = 1;
+	var totalpage = 1;
+	var namehand = '139';
+	var displaytype = 'st';
+	var gtimer = null;
+	//大图
+	function dPlayBig()
+	{
+		var imgObj = document.getElementById("bigimg");
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay()
+	{
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay()
+	{
+		if(npage!=totalpage) {
+			gtimer = setTimeout("dPlayNext()",10000);
+		}
+	}
+
+	//上一张
+	function dPlayPre(){
+
+	if(npage<2)
+	{
+			alert("这是第一页");
+	}
+	else
+	{
+			if(npage==2) {
+				if(namehand!='') location.href = namehand+shortname;
+				else location.href = "view.php?aid=139";
+			} else if(displaytype=='st' && namehand!='') {
+				location.href = namehand+"_"+(npage-1)+shortname;
+			} else {
+				location.href = "view.php?aid=139&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext()
+	{
+		if(npage==totalpage) { alert("没有了哦"); }
+		else
+		{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+			else location.href = "view.php?aid=139&pageno="+(npage+1);
+		}
+	}
+-->
+</script>
+</head>
+<body class="picboxview">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>临沂沂河石化有限公司</title>
+<link href="/lyyh/templets/lyyh/statics/css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/jquery-1.8.0.min.js"></script> 
+</head>
+
+<body>
+
+<div class="all">
+
+	<!--logo-->
+    <div class="logo">
+    	<div class="shoucang">
+			<a href="javascript:window.external.addFavorite('http://lianfa.com','联发');">加入收藏 </a>|
+			<a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://lianfa.com');"> 设为首页</a>
+		</div>
+		<!-- 检索 -->
+        <div class="search">
+        	<form name="formsearch" action="/lyyh/plus/search.php">
+        	
+        	
+                <input name="q" onclick="javascript:this.value='';" value="请输入你要查找的商品" />
+               
+             <button type="submit" class="search-submit" name="btsearch" id="btsearch"></button>
+                
+            </form>
+        </div><!--
+        
+         <form  name="formsearch" action="/lyyh/plus/search.php">
+  
+        
+         
+           <input name="q" type="text" class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="title" selected='1'>检索标题</option>
+               <option value="titlekeyword">智能模糊</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>
+    
+        </form>
+    --></div>
+    
+    <!--导航-->
+    <div class="bander">
+    	<ul>
+        	<li style="width:88px;"><a href="/lyyh/">首页</a></li>
+            
+      	<li><a href='/lyyh/plus/list.php?tid=1'  rel='dropmenu1'>关于我们</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=2'  rel='dropmenu2'>新闻中心</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=3'  rel='dropmenu3'>企业文化</a></li>
+      	<li><a href='/lyyh/plus/list.php?tid=4' >产品展示</a></li>
+      	<li><a href='/lyyh/plus/list.php?tid=5' >人才招聘</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=6' >在线留言</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=7'  rel='dropmenu7'>联系我们</a></li>
+      	
+        </ul>
+    </div>
+    
+
+
+    <!--幻灯-->
+    <div class="hd">
+    	<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/jquery.jslides.js"></script> 
+		<link href="/lyyh/templets/lyyh/statics/css/jquery.jslides.css" rel="stylesheet" type="text/css" />
+    	<div id="full-screen-slider" style="overflow:hidden;">
+            <ul id="slides">
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/1.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/2.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/3.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+				<li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/4.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+	<!--公司动态-->
+    <div class="dongtai">
+    	<strong>公司动态:
+    	</strong>
+        <script>
+            $(function(){
+                //单行应用@Mr.Think
+                var _wrap=$('ul.line');//定义滚动区域
+                var _interval=2000;//定义滚动间隙时间
+                var _moving;//需要清除的动画
+                _wrap.hover(function(){
+                    clearInterval(_moving);//当鼠标在滚动区域中时,停止滚动
+                },function(){
+                    _moving=setInterval(function(){
+                        var _field=_wrap.find('li:first');//此变量不可放置于函数起始处,li:first取值是变化的
+                        var _h=_field.height();//取得每次滚动高度
+                        _field.animate({marginTop:-_h+'px'},600,function(){//通过取负margin值,隐藏第一行
+                            _field.css('marginTop',0).appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                        })
+                    },_interval)//滚动间隔时间取决于_interval
+                }).trigger('mouseleave');//函数载入时,模拟执行mouseleave,即自动滚动
+            });
+        </script>
+
+	
+        <div class="ggr">
+            <ul class="line">
+            <li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/121.html">临沂沂河石化有限公司 20万吨/年针状焦及配套工程项目环境</a>【2015-11-06】<br/>
+           </li>
+<li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/120.html">[太阳能]清洁能源替代煤炭加速利用</a>【2015-11-03】<br/>
+           </li>
+<li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/119.html">清洁能源，既环保又节能</a>【2015-10-06】<br/>
+           </li>
+
+
+            </ul>            
+        </div>
+       <div class="tianqi">
+       		<span id="time"></span> 
+			<script language="javascript" type="text/javascript">
+			 var d = new Date()
+			 document.getElementById('time').innerHTML=''+d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日　'+' 星期'+'日一二三四五六'.charAt(d.getDay());
+            </script>
+  			<iframe src="http://m.weather.com.cn/m/pn6/weather.htm " allowtransparency="true" style="background-color=transparent"  width="140" height="16"  hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+       </div>
+    </div>
+
+	<link rel="stylesheet" href="/lyyh/templets/lyyh/statics/css/cs_box.css" type="text/css"/>
+	<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/cs_box.js"></script>
+	<div id='cs_box'>
+		<span class='cs_title'>在线咨询</span>
+		<span class='cs_close'>x</span>
+		<div class='cs_img'></div>
+		<!-- <span class='cs_info'>有什么可以帮到你</span>
+		<div class='cs_btn'>QQ咨询</div> -->
+	</div>
+	<script type="text/javascript">
+		myEvent(window,'load',function(){
+			cs_box.set({
+				img_path : '/lyyh/templets/lyyh/statics/images/shihua/01.jpg',		//设置图片路径
+				qq : '1744474071',		//设置QQ号码
+			});
+		});
+	</script> 
+<!-- /header -->
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> <a href='http://localhost/lyyh'>主页</a> > <a href='/lyyh/plus/list.php?tid=4'>产品展示</a> > 
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>轻石脑</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>2015-11-10 18:52<small>来源:</small>未知 <small>作者:</small>admin <small>点击:</small><script src="/lyyh/plus/count.php?view=yes&aid=139&mid=1" type='text/javascript' language="javascript"></script>次
+			</div><!-- /info -->
+			<div class="picbox">
+
+             
+					<center>
+						<a href='javascript:dPlayBig();' class='c1'>原始图片</a>
+
+						<a href='javascript:dPlayPre();' class='c1'>上一张</a>
+
+						<a href='javascript:dPlayNext();' class='c1'>下一张</a>
+
+						<a href='javascript:dStopPlay();' class='c1'>自动 / 暂停播放</a>
+
+					</center>
+                	
+             <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+             
+                
+                <a href='/lyyh/uploads/allimg/151110/1-1511101U231.jpg' >
+                  <img src='/lyyh/uploads/allimg/151110/1-1511101U231.jpg' id='bigimg'  width='800'  alt='轻石脑m' border='0' />
+                </a>
+                <a href='/lyyh/uploads/allimg/151110/1-1511101U231.jpg' >
+                	轻石脑
+                </a>
+                
+             
+
+             <script language='javascript'>dStartPlay();</script>
+
+			</div>
+           	<div class="intro"><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top; display:block"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentmidpicad&charset=gbk"></script></div>轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑轻石脑
+            <div style="clear:both"></div>
+            </div>
+			<div class="newdigg" id="newdigg">
+				<div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',139)">
+					<div class="digg_act">顶一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+				<div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',139)">
+					<div class="digg_act">踩一下</div>
+					<div class="digg_num">(0)</div>
+					<div class="digg_percent">
+						<div class="digg_percent_bar"><span style="width:0%"></span></div>
+						<div class="digg_percent_num">0%</div>
+					</div>
+				</div>
+			</div>
+			 <script language="javascript" type="text/javascript">getDigg(139);</script>
+
+			
+			<div class="handle">
+				
+				
+			</div><!-- /handle -->
+		</div><!-- /viewbox -->
+
+
+
+	</div><!-- /pleft -->
+
+	<div class="pright">
+	    
+
+    	<div class="mt1">
+			<dl class="tbox">
+				<dt><strong>热点图集</strong></dt>
+				<dd>
+					<ul class="e3">
+                    <li>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/140.html" class="preview"><img src="/lyyh/uploads/151110/151110/1-1511101U142937.jpg" alt="尾油"/></a>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/140.html" class="title">尾油</a>
+							<span class="intro">更新:2015-11-10</span>
+						</li>
+<li>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/137.html" class="preview"><img src="/lyyh/uploads/allimg/151109/1-1511091951180-L.jpg" alt="柴油"/></a>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/137.html" class="title">柴油</a>
+							<span class="intro">更新:2015-11-09</span>
+						</li>
+<li>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/138.html" class="preview"><img src="/lyyh/uploads/allimg/151109/1-1511091952180-L.jpg" alt="硫磺"/></a>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/138.html" class="title">硫磺</a>
+							<span class="intro">更新:2015-11-09</span>
+						</li>
+<li>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/142.html" class="preview"><img src="/lyyh/uploads/151110/1-1511101TT1T8.jpg" alt="重石脑"/></a>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/142.html" class="title">重石脑</a>
+							<span class="intro">更新:2015-11-10</span>
+						</li>
+<li>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/139.html" class="preview"><img src="/lyyh/uploads/151110/1-1511101U2104G.jpg" alt="轻石脑"/></a>
+							<a href="/lyyh/a/chanpinzhanshi/2015/1109/139.html" class="title">轻石脑</a>
+							<span class="intro">更新:2015-11-10</span>
+						</li>
+
+
+					</ul>
+				</dd>
+			</dl>
+		</div>
+        <div id="contentRtPicAD" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad&charset=gbk"></script></div>
+		
+      <div id="contentRtPicAD2" style="margin:10px auto"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=contentrtpicad2&charset=gbk"></script></div>
+
+	</div><!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><script type="text/javascript" src="http://ad.dedecms.com/adsview/?action=single&key=innerfooterad2&charset=gbk"></script></div>
+<!--底部-->
+    <!--底部-->
+    <div class="footer"><p>版权所有：临沂沂河石化有限公司&nbsp;&nbsp;&nbsp;技术支持：<a href="lywww.com" title="临沂在线">临沂在线</a></p></div>
+
+</div>
+
+
+
+</body>
+</html>
+
+<!-- /footer -->
+
+</body>
+</html>

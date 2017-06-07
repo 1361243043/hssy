@@ -1,0 +1,10 @@
+{dede:pagestyle maxwidth='800' pagepicnum='12' ddmaxwidth='200' row='3' col='4' value='2'/}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K057.jpg' text='友谊天长地久' width='743' height='555'} /lyyh/uploads/allimg/151109/1-1511091K057.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K058.jpg' text='青春' width='634' height='430'} /lyyh/uploads/allimg/151109/1-1511091K058.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K058-50.jpg' text='兄弟' width='720' height='960'} /lyyh/uploads/allimg/151109/1-1511091K058-50.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K058-51.jpg' text='枪' width='512' height='512'} /lyyh/uploads/allimg/151109/1-1511091K058-51.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K059.jpg' text='一生幸福' width='960' height='540'} /lyyh/uploads/allimg/151109/1-1511091K059.jpg {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K059.png' text='相框1' width='870' height='580'} /lyyh/uploads/allimg/151109/1-1511091K059.png {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K059-50.png' text='相框2' width='1001' height='667'} /lyyh/uploads/allimg/151109/1-1511091K059-50.png {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K100.png' text='相框3' width='870' height='580'} /lyyh/uploads/allimg/151109/1-1511091K100.png {/dede:img}
+{dede:img ddimg='/lyyh/uploads/allimg/151109/1-1511091K100-50.png' text='相框4' width='780' height='551'} /lyyh/uploads/allimg/151109/1-1511091K100-50.png {/dede:img}

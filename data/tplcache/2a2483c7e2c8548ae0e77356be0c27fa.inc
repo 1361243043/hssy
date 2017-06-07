@@ -1,0 +1,5 @@
+<dl>
+		                 <dt>[field:imglink/]<span><img src="../templets/hssy/images/vivs.png" height="41" width="100" /></span></dt>
+		                 <dd>[field:textlink/]TIME:]([field:pubdate function=MyDate('m-d',@me)/])
+		                 </dd>
+		            </dl>

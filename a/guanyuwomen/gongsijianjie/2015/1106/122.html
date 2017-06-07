@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>临沂沂河石化有限公司</title>
+<link href="/lyyh/templets/lyyh/statics/css/styles.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/jquery-1.8.0.min.js"></script> 
+</head>
+
+<body>
+
+<div class="all">
+
+	<!--logo-->
+    <div class="logo">
+    	<div class="shoucang">
+			<a href="javascript:window.external.addFavorite('http://lianfa.com','联发');">加入收藏 </a>|
+			<a href="#" onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://lianfa.com');"> 设为首页</a>
+		</div>
+		<!-- 检索 -->
+        <div class="search">
+        	<form name="formsearch" action="/lyyh/plus/search.php">
+        	
+        	
+                <input name="q" onclick="javascript:this.value='';" value="请输入你要查找的商品" />
+               
+             <button type="submit" class="search-submit" name="btsearch" id="btsearch"></button>
+                
+            </form>
+        </div><!--
+        
+         <form  name="formsearch" action="/lyyh/plus/search.php">
+  
+        
+         
+           <input name="q" type="text" class="search-keyword" id="search-keyword" value="在这里搜索..." onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />
+           <select name="searchtype" class="search-option" id="search-option">
+               <option value="title" selected='1'>检索标题</option>
+               <option value="titlekeyword">智能模糊</option>
+           </select>
+          <button type="submit" class="search-submit">搜索</button>
+    
+        </form>
+    --></div>
+    
+    <!--导航-->
+    <div class="bander">
+    	<ul>
+        	<li style="width:88px;"><a href="/lyyh/">首页</a></li>
+            <li><a href='/lyyh/plus/list.php?tid=1'  rel='dropmenu1'>关于我们</a></li>
+      	<li><a href='/lyyh/plus/list.php?tid=2'  rel='dropmenu2'>新闻中心</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=3' >企业文化</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=4' >产品展示</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=5' >人才招聘</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=6' >在线留言</a></li>
+      	
+      	<li><a href='/lyyh/plus/list.php?tid=7' >联系我们</a></li>
+      	
+        </ul>
+    </div>
+    
+
+
+    <!--幻灯-->
+    <div class="hd">
+    	<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/jquery.jslides.js"></script> 
+		<link href="/lyyh/templets/lyyh/statics/css/jquery.jslides.css" rel="stylesheet" type="text/css" />
+    	<div id="full-screen-slider" style="overflow:hidden;">
+            <ul id="slides">
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/1.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/2.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+                <li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/3.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+				<li style=" background:url(/lyyh/templets/lyyh/statics/images/shihua/4.jpg) no-repeat center top; height:363px;"><a href="#" target="_blank">石化</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+	<!--公司动态-->
+    <div class="dongtai">
+    	<strong>公司动态:
+    	</strong>
+        <script>
+            $(function(){
+                //单行应用@Mr.Think
+                var _wrap=$('ul.line');//定义滚动区域
+                var _interval=2000;//定义滚动间隙时间
+                var _moving;//需要清除的动画
+                _wrap.hover(function(){
+                    clearInterval(_moving);//当鼠标在滚动区域中时,停止滚动
+                },function(){
+                    _moving=setInterval(function(){
+                        var _field=_wrap.find('li:first');//此变量不可放置于函数起始处,li:first取值是变化的
+                        var _h=_field.height();//取得每次滚动高度
+                        _field.animate({marginTop:-_h+'px'},600,function(){//通过取负margin值,隐藏第一行
+                            _field.css('marginTop',0).appendTo(_wrap);//隐藏后,将该行的margin值置零,并插入到最后,实现无缝滚动
+                        })
+                    },_interval)//滚动间隔时间取决于_interval
+                }).trigger('mouseleave');//函数载入时,模拟执行mouseleave,即自动滚动
+            });
+        </script>
+
+	
+        <div class="ggr">
+            <ul class="line">
+            <li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/121.html">临沂沂河石化有限公司 20万吨/年针状焦及配套工程项目环境</a>【2015-11-06】<br/>
+           </li>
+<li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/120.html">[太阳能]清洁能源替代煤炭加速利用</a>【2015-11-03】<br/>
+           </li>
+<li>
+           <a  href="/lyyh/a/xinwenzhongxin/gongsidongtai/2015/1106/119.html">清洁能源，既环保又节能</a>【2015-10-06】<br/>
+           </li>
+
+
+            </ul>            
+        </div>
+       <div class="tianqi">
+       		<span id="time"></span> 
+			<script language="javascript" type="text/javascript">
+			 var d = new Date()
+			 document.getElementById('time').innerHTML=''+d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日　'+' 星期'+'日一二三四五六'.charAt(d.getDay());
+            </script>
+  			<iframe src="http://m.weather.com.cn/m/pn6/weather.htm " allowtransparency="true" style="background-color=transparent"  width="140" height="16"  hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+       </div>
+    </div>
+
+	<link rel="stylesheet" href="/lyyh/templets/lyyh/statics/css/cs_box.css" type="text/css"/>
+	<script type="text/javascript" src="/lyyh/templets/lyyh/statics/js/cs_box.js"></script>
+	<div id='cs_box'>
+		<span class='cs_title'>在线咨询</span>
+		<span class='cs_close'>x</span>
+		<div class='cs_img'></div>
+		<!-- <span class='cs_info'>有什么可以帮到你</span>
+		<div class='cs_btn'>QQ咨询</div> -->
+	</div>
+	<script type="text/javascript">
+		myEvent(window,'load',function(){
+			cs_box.set({
+				img_path : '/lyyh/templets/lyyh/statics/images/shihua/01.jpg',		//设置图片路径
+				qq : '1744474071',		//设置QQ号码
+			});
+		});
+	</script> 
+<!-- 导入外部头文件 -->
+
+    <div class="er_mid">
+    	<div class="er_mid_l er_gywm">
+        	<ul>
+            			    				<li><a href="./index.php?m=content&c=index&a=lists&catid=24">发展历程</a></li>
+								<li><a href="./index.php?m=content&c=index&a=lists&catid=23">企业前景</a></li>
+								<li><a href="./index.php?m=content&c=index&a=lists&catid=21">公司简介</a></li>
+								<li><a href="./index.php?m=content&c=index&a=lists&catid=40">企业展示</a></li>
+						    
+					<!-- <li><a href="./index.php?m=content&c=index&a=lists&catid=21">公司简介</a></li> 
+					<li><a href="./index.php?m=content&c=index&a=lists&catid=20">荣誉资质</a></li>
+					<li><a href="./index.php?m=content&c=index&a=lists&catid=24">发展历程</a></li>
+					<li><a href="./index.php?m=content&c=index&a=lists&catid=23">企业前景</a></li>
+					<li><a href="./index.php?m=content&c=index&a=lists&catid=22">质量控制</a></li> -->
+            </ul>
+            <img src="/lyyh/templets/lyyh/statics/images/shihua/left_lianxius.jpg" class="er_left_lxwm" />
+            
+			<p style="margin-top:10px;"><strong>电话：</strong>0539-8458011</p>
+			<p><strong>传真：</strong>0539-8458099</p>  
+			<p><strong>网址：</strong>www.yiheshihua.com</p>
+			<p><strong>邮箱：</strong>yiheshihua@163.com</p>
+			<p style="width:166px;"><strong>地址：</strong>临沂市兰山区化工园区（临沂西外环与柳青河交汇处）</p>
+
+        </div>
+        
+        <div class="er_mid_r">
+        	<div class="er_mid_r_mbx">
+														<strong>简介</strong>
+													<strong>当前位置:</strong> <a href='http://localhost/lyyh'>主页</a> > <a href='/lyyh/plus/list.php?tid=1'>关于我们</a> > <a href='/lyyh/plus/list.php?tid=11'>公司简介</a> > 
+			</div>
+
+            <div class="er_mid_r_con">
+           <div class="picbox">
+
+             
+					<center>
+						<a href='javascript:dPlayBig();' class='c1'>原始图片</a>
+
+						<a href='javascript:dPlayPre();' class='c1'>上一张</a>
+
+						<a href='javascript:dPlayNext();' class='c1'>下一张</a>
+
+						<a href='javascript:dStopPlay();' class='c1'>自动 / 暂停播放</a>
+
+					</center>
+                	
+             <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+             
+                
+                <a href='/lyyh/uploads/allimg/151106/1-151106153J8.jpg' >
+                  <img src='/lyyh/uploads/allimg/151106/1-151106153J8.jpg' id='bigimg'  width='722'  alt='公司照片' border='0' />
+                </a>
+                <a href='/lyyh/uploads/allimg/151106/1-151106153J8.jpg' >
+                	简介
+                </a>
+                
+             
+
+             <script language='javascript'>dStartPlay();</script>
+
+			</div>
+			<span style="color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;">&nbsp;临沂沂河石化限公司是一家专业生产高清洁石化新能源的炼化企业，公司成立于2010年3月，位于兰山区化工园区（兰山区汪沟镇）。企业定位走石油产品精深加工的路线，遵循&ldquo;精心生产清洁能源，诚心回报大美临沂&rdquo;的企业理念，运用目前国内最先进的设备和高端专利技术，采用&ldquo;一炉两塔&rdquo;和&ldquo;大循环比&rdquo;的工艺技术，生产高纯度碳素产品及达到国五标准的柴汽油组份。</span><br style="padding: 0px; margin: 0px; color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;" />
+<span style="color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;">&nbsp; &nbsp; 公司占地面积800亩，一期总投资10亿元，预计利税1.2亿元。公司建设始终坚持高起点，高标准，确保安全环保理念，着眼同行业国内最先进技术。主要设备使用法国钢材，荷兰和美国生产的阀门，浙大自动化控制系统，其中丹麦催化裂化剂是目前在中国使用的唯一一家，在国内处于领先水平。正是由于设备的先进性才有能力将国内的不易加工的低品质原料改质成达到国五标准的柴汽油组分，硫含量可以达到1ppm。</span><br style="padding: 0px; margin: 0px; color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;" />
+<span style="color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;">&nbsp; &nbsp; 二期新建150万吨/年原料预处理装置，60万吨/年蜡油加氢装置，60万吨/年催化裂化装置，80万吨/年渣油加氢装置，40万吨/年柴油加氢改质装置，15万吨/年气分装置，40万吨/年汽柴油加氢精制装置，6万Nm3/h甲醇制氢装置及配套公用工程项目。</span><br style="padding: 0px; margin: 0px; color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;" />
+<span style="color: rgb(0, 0, 0); font-family: Simsun; line-height: 24px;">&nbsp; &nbsp; 项目建成投产后将进一步带动地方经济的发展，预计总销售收入120亿元，税金7.2亿元。</span>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+<!--底部-->
+    <!--底部-->
+    <div class="footer"><p>版权所有：临沂沂河石化有限公司&nbsp;&nbsp;&nbsp;技术支持：<a href="lywww.com" title="临沂在线">临沂在线</a></p></div>
+
+</div>
+
+
+
+</body>
+</html>
+  
+  <!-- 导入外部尾部文件 --> 

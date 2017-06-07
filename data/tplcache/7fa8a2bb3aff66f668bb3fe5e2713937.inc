@@ -1,0 +1,1 @@
+<li>[field:array runphp='yes']@me = (empty(@me['litpic']) ? "" : "<img src='{@me['image']}'/>"); [/field:array]</li>

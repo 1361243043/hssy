@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",236,264);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("field","",277,296);
+$z[1][4]['name']="title";
+$z[2]=Array("field","",337,366);
+$z[2][4]['name']="keywords";
+$z[3]=Array("field","",406,464);
+$z[3][4]['name']="description";
+$z[3][4]['function']="html2text(@me)";
+$z[4]=Array("global","",482,514);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("include","",623,658);
+$z[5][4]['filename']="head.htm";
+$z[6]=Array("field","",790,819);
+$z[6][4]['name']="position";
+$z[7]=Array("list","\r\n    <li> [field:array runphp='yes']@me = (empty(@me['litpic']) ? \"\" : \"<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>\"); [/field:array]\r\n     [<b>[field:typelink/]</b>] <a href=\"[field:arcurl/]\" class=\"title\">[field:title/]</a> <span class=\"info\"> <small>日期：</small>[field:pubdate function=\"GetDateTimeMK(@me)\"/] <small>点击：</small>[field:click/] <small>好评：</small>[field:scores/] </span>\r\n     <p class=\"intro\"> [field:description/]... </p>\r\n    </li>\r\n    ",896,1438);
+$z[7][4]['pagesize']="10";
+$z[8]=Array("pagelist","",1539,1617);
+$z[8][4]['listitem']="info,index,end,pre,next,pageno,option";
+$z[8][4]['listsize']="5";
+$z[9]=Array("channel","\r\n      <li><a href='[field:typeurl/]'>[field:typename/]</a></li>\r\n      ",1824,2031);
+$z[9][4]['type']="son";
+$z[9][4]['currentstyle']="<li><a href='~typelink~' class='thisclass'>~typename~</a></li>";
+$z[10]=Array("myad","",2125,2156);
+$z[10][4]['name']="listRtPicAD";
+$z[11]=Array("arclist","\r\n      <li><a href=\"[field:arcurl/]\">[field:title/]</a>\r\n       <p>[field:description function='cn_substr(@me,80)'/]...</p>\r\n      </li>\r\n      ",2327,2528);
+$z[11][4]['flag']="c";
+$z[11][4]['titlelen']="42";
+$z[11][4]['row']="6";
+$z[12]=Array("arclist","\r\n      <li><a href=\"[field:arcurl/]\">[field:title/]</a></li>\r\n      ",2762,2881);
+$z[12][4]['row']="10";
+$z[12][4]['orderby']="click";
+$z[13]=Array("myad","",2976,3008);
+$z[13][4]['name']="listRtPicAD2";
+$z[14]=Array("myad","",3114,3147);
+$z[14][4]['name']="innerfooterAD";
+$z[15]=Array("include","",3155,3192);
+$z[15][4]['filename']="footer.htm";
+
+?>

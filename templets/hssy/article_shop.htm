@@ -1,0 +1,71 @@
+{dede:include filename="head.html"/}
+<!-- 导入外部头文件 -->
+		<div id="center">
+			<div class="cen_left">
+				<div class="cen_left_1">
+					<ul>
+						<p class="ps"><img src="{dede:global.cfg_templets_skin/}/images/showcase.jpg" width="245" height="70" /></p>
+									
+			        	{dede:channelartlist typeid=3}
+			 			<li><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+						{/dede:channelartlist}
+					</ul>  
+				</div><!--cen_left_1 /-->
+				<div class="cen_left_2">
+					  <p><img src="{dede:global.cfg_templets_skin/}/images/shou.jpg" width="245" height="70" /></p>
+				<div class="animate">
+					<img src="{dede:global.cfg_templets_skin/}/images/workShow_left.jpg" width="22" height="29" class="left" />
+					<img src="{dede:global.cfg_templets_skin/}/images/workShow_right.jpg" width="22" height="29" class="right" />
+					<div class="tu">
+						<div class="imgs">
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/work_left1.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>9680</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/workleft_1.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>6666</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/workleft_2.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>7890</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images/workleft_3.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>8888</span>&yen;</a></dd>
+							</dl>
+						</div><!--.imgs-->
+					 </div><!--.tu-->
+				</div><!--.animate-->
+				</div><!--cen_left_2 /-->
+				<div class="cen_left_3">
+					<img src="{dede:global.cfg_templets_skin/}/images/shou.jpg" width="245" height="71" />
+                	<img src="{dede:global.cfg_templets_skin/}/images/2014-10-24_081105.jpg" width="243" height="150" />
+					<ul>
+						<li><a href="#">贵阳雅尼婚纱个人风格艺术照最好<span class="left">FEATURE:215</span><span class="right">DATE:2012-07-06</span></a></li>
+						<li><a href="#">贵阳拍摄艺术照哪家影楼最好?<span class="left">FEATURE:189</span><span class="right">DATE:2012-07-06</span></a></li>
+						<li><a href="#">夏季摄影应该注意什么?<span class="left">FEATURE:170</span><span class="right">DATE:2012-07-05</span></a></li>
+					</ul>
+				</div><!--cen_left_3 /-->
+                <div class="cenLeft4">
+                	<a href="#"><img src="{dede:global.cfg_templets_skin/}/images/workShow_45.jpg" height="168" width="222" /></a>
+                </div><!--cenLeft4-->
+			</div><!--cen_left /-->
+			<div class="cen_right">
+				<h2>{dede:field.typename/}<span><font size="2">{dede:field name='position'/}</font></span></h2>
+				<br />
+				
+			 <div class="rightImg">
+				<img src={dede:field.litpic/}><br/>
+				<strong>标题：</strong><span>{dede:field name='title'/}</span><br />
+				<strong>商品原价：</strong><span>{dede:field.price/}元</span><br />
+				<strong>优惠价格：</strong><span>{dede:field.trueprice/}元</span><br />
+				<strong>人气：</strong>已有<span><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script></span>人阅读<br />
+				<strong>商品描述：</strong><br/><span>{dede:field.body/}</span><br />
+			</div>
+			
+            <!-- 结束 -->
+			</div><!--.cen_right-->
+		</div><!--#center-->
+{dede:include filename="footer.html"/}
+<!-- 导入外部头文件 -->

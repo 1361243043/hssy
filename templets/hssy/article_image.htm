@@ -1,0 +1,251 @@
+{dede:include filename="head.html"/}
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+  var shortname = "{dede:global.art_shortname/}";
+  var npage = {dede:field name='nowpage'/};
+	var totalpage = {dede:field name='totalpage'/};
+	var namehand = '{dede:field name='namehand'/}';
+	var displaytype = '{dede:field name='displaytype'/}';
+	var gtimer = null;
+	//大图
+	function dPlayBig()
+	{
+		var imgObj = document.getElementById("bigimg");
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay()
+	{
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay()
+	{
+		if(npage!=totalpage) {
+			gtimer = setTimeout("dPlayNext()",10000);
+		}
+	}
+
+	//上一张
+	function dPlayPre(){
+
+	if(npage<2)
+	{
+			alert("这是第一页");
+	}
+	else
+	{
+			if(npage==2) {
+				if(namehand!='') location.href = namehand+shortname;
+				else location.href = "view.php?aid={dede:field name='id'/}";
+			} else if(displaytype=='st' && namehand!='') {
+				location.href = namehand+"_"+(npage-1)+shortname;
+			} else {
+				location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext()
+	{
+		if(npage==totalpage) { alert("没有了哦"); }
+		else
+		{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+			else location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage+1);
+		}
+	}
+-->
+</script>
+<!-- 导入外部头文件 -->
+		<div id="center">
+			<div class="cen_left">
+				<div class="cen_left_1">
+					<ul>
+						<p class="ps"><img src="{dede:global.cfg_templets_skin/}/images//showcase.jpg" width="245" height="70" /></p>
+						{dede:channelartlist typeid=1}
+			 			<li><a href='{dede:field name='typeurl'/}'>{dede:field name='typename'/}</a></li>
+						{/dede:channelartlist}
+					</ul>  
+				</div><!--cen_left_1 /-->
+				<div class="cen_left_2">
+					  <p><img src="{dede:global.cfg_templets_skin/}/images//shou.jpg" width="245" height="70" /></p>
+				<div class="animate">
+					<img src="{dede:global.cfg_templets_skin/}/images//workShow_left.jpg" width="22" height="29" class="left" />
+					<img src="{dede:global.cfg_templets_skin/}/images//workShow_right.jpg" width="22" height="29" class="right" />
+					<div class="tu">
+						<div class="imgs">
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images//work_left1.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>9680</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images//workleft_1.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>6666</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images//workleft_2.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>7890</span>&yen;</a></dd>
+							</dl>
+							<dl>
+								<dt><a href="#"><img src="{dede:global.cfg_templets_skin/}/images//workleft_3.jpg" height="157" width="173" /></a></dt>
+								<dd><a href="#">价格：<span>8888</span>&yen;</a></dd>
+							</dl>
+						</div><!--.imgs-->
+					 </div><!--.tu-->
+				</div><!--.animate-->
+				</div><!--cen_left_2 /-->
+				<div class="cen_left_3">
+					<img src="{dede:global.cfg_templets_skin/}/images//shou.jpg" width="245" height="71" />
+                	<img src="{dede:global.cfg_templets_skin/}/images//2014-10-24_081105.jpg" width="243" height="150" />
+					<ul>
+						<li><a href="#">贵阳雅尼婚纱个人风格艺术照最好<span class="left">FEATURE:215</span><span class="right">DATE:2012-07-06</span></a></li>
+						<li><a href="#">贵阳拍摄艺术照哪家影楼最好?<span class="left">FEATURE:189</span><span class="right">DATE:2012-07-06</span></a></li>
+						<li><a href="#">夏季摄影应该注意什么?<span class="left">FEATURE:170</span><span class="right">DATE:2012-07-05</span></a></li>
+					</ul>
+				</div><!--cen_left_3 /-->
+                <div class="cenLeft4">
+                	<a href="#"><img src="{dede:global.cfg_templets_skin/}/images//workShow_45.jpg" height="168" width="222" /></a>
+                </div><!--cenLeft4-->
+			</div><!--cen_left /-->
+			<div class="cen_right">
+				<h2>{dede:field.typename/}<span><font size="2">{dede:field name='position'/}</font></span></h2>
+                <ul class="rightImg">
+                    <li><img src="{dede:global.cfg_templets_skin/}/images//work_dat.jpg" width="693" height="141" class="ig1" /></li>
+                    <li>
+                {dede:field name='pagestyle' alt='根据不同的页面风格输出不同的头信息' runphp='yes'}
+                if(@me==3) {
+                	@me = '<ul class="e8">';
+                }
+                else if(@me==2) {
+                	@me = "
+					<center>
+						<a href='javascript:dPlayBig();' class='c1'>原始图片</a>\r\n
+						<a href='javascript:dPlayPre();' class='c1'>上一张</a>\r\n
+						<a href='javascript:dPlayNext();' class='c1'>下一张</a>\r\n
+						<a href='javascript:dStopPlay();' class='c1'>自动 / 暂停播放</a>\r\n
+					</center>
+                	";
+                }
+                else {
+                	@me = '';
+                }
+             {/dede:field}    
+                     <!-- 如果使用的是多页单图模式(幻灯)，把href里的链接改为 javascript:dPlayNext(); 表示点击看下一页 -->
+             {dede:field name='imgurls' alt='图片输出区'}
+                [field:pagestyle runphp='yes'] @me= (@me==3 ? '<li>' : '');[/field:pagestyle]
+                <a href='[field:linkurl/]' [field:pagestyle runphp='yes'] @me= (@me==3 ? 'class="pic"' : ''); [/field:pagestyle]>
+                  <img src='[field:imgsrc/]' id='bigimg' [field:imgwidth /] alt='[field:alttext /]' border='0' />
+                </a>
+                <a href='[field:linkurl/]' [field:pagestyle runphp='yes']@me = (@me==3 ? 'class="title"' : '');[/field:pagestyle]>
+                	
+                </a>
+                [field:pagestyle runphp='yes'] @me = (@me==3 ? '</li>' : ''); [/field:pagestyle]
+             {/dede:field}
+
+             {dede:field name='pagestyle' alt='根据不同的风格输出不同的结尾信息' runphp='yes'}
+                if(@me==3) {
+                @me = '</ul>';
+                }
+                else if(@me==2) {
+                	@me = "<script language='javascript'>dStartPlay();</script>\r\n";
+               	}
+               	else {
+               		@me = '';
+                }
+             {/dede:field}
+               
+                    </li>
+                </ul><!--.rightImg-->
+			</div><!--.cen_right-->
+		</div><!--#center-->
+{dede:include filename="footer.html"/}
+<!-- 导入外部头文件 -->

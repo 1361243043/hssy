@@ -1,0 +1,68 @@
+{dede:include filename="head.html"/}
+<style type="text/css">
+/*济州岛特效*/
+.accordion {width:1200px;margin:0px auto;list-style:none;padding:0px;}
+.accordion img, .accordion .caption {position:absolute;left:-9999px;}
+.accordion {background-color:#FFF;border:4px solid #FFF;}
+.accordion .panel {background-color:#EEE;}
+.accordion {width:1200px;margin:0px auto;list-style:none;padding:0px;}
+.accordion img, .accordion .caption {position:absolute;left:-9999px;}
+.accordion {position:relative;overflow:hidden;}
+.accordion .panel {background-color:#000;background-repeat:no-repeat;background-position:center center;position:absolute;overflow:hidden;}
+.accordion .shadow {position:absolute;right:0px;width:25px;height:100%;}
+.accordion .preloader {width:62px;height:14px;position:absolute;z-index:15;}
+.accordion .caption {overflow:hidden;position:absolute;z-index:20;}
+.accordion .caption-background {background:rgba(0, 0, 0, 0.5);position:absolute;width:100%;
+	height:100%;}
+.accordion .caption p {color:#FFF;margin:0px;padding:10px;}
+.accordion .caption p a {color:#FFF;}
+ </style>
+
+
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jizhoujquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/js/jizhoujquery.gridAccordion.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($){
+$('.accordion').gridAccordion({width:960, 
+height:680, 
+columns:5, 
+distance:2, 
+closedPanelWidth:10, 
+closedPanelHeight:10, 
+alignType:'centerCenter',
+slideshow:true,
+panelProperties:{
+0:{captionWidth:200, captionHeight:35, captionTop:30, captionLeft:30},
+4:{captionWidth:150, captionHeight:100, captionTop:30, captionLeft:650},
+7:{captionWidth:310, captionHeight:35, captionTop:350, captionLeft:40},
+8:{captionWidth:300, captionHeight:40, captionTop:150, captionLeft:35},
+11:{captionWidth:150, captionHeight:120, captionTop:300, captionLeft:30},
+14:{captionWidth:300, captionHeight:40, captionTop:30, captionLeft:50},
+16:{captionWidth:150, captionHeight:120, captionTop:150, captionLeft:10},
+18:{captionWidth:300, captionHeight:40, captionTop:130, captionLeft:50}
+}});
+});
+</script>
+
+
+   
+   
+     
+     
+  
+     
+      <ul class="accordion">
+      
+       
+       	{dede:arclist   typeid='4'  imgwidth='444' imgheight='530' limit='0,20'}
+
+		<li>[field:imglink/]</li>
+
+		{/dede:arclist}
+
+       	
+     </ul>
+      
+   
+   {dede:include filename="footer.html"/}  
+     

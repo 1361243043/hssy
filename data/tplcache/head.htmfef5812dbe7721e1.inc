@@ -1,0 +1,44 @@
+<?php
+$z[0]=Array("global","",254,280);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",302,334);
+$z[1][4]['name']="cfg_templets_skin";
+$z[2]=Array("global","",432,464);
+$z[2][4]['name']="cfg_templets_skin";
+$z[3]=Array("global","",951,976);
+$z[3][4]['name']="cfg_cmsurl";
+$z[4]=Array("global","",1355,1380);
+$z[4][4]['name']="cfg_cmsurl";
+$z[5]=Array("global","",2119,2144);
+$z[5][4]['name']="cfg_cmsurl";
+$z[6]=Array("channel","\r\n      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>\r\n      	",2176,2379);
+$z[6][4]['type']="top";
+$z[6][4]['row']="10";
+$z[6][4]['currentstyle']="<li><a href='~typelink~' ~rel~>~typename~</a></li>";
+$z[7]=Array("global","",2500,2532);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",2589,2621);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("global","",2825,2857);
+$z[9][4]['name']="cfg_templets_skin";
+$z[10]=Array("global","",3012,3044);
+$z[10][4]['name']="cfg_templets_skin";
+$z[11]=Array("global","",3199,3231);
+$z[11][4]['name']="cfg_templets_skin";
+$z[12]=Array("global","",3374,3406);
+$z[12][4]['name']="cfg_templets_skin";
+$z[13]=Array("arclist","\r\n            <li>\r\n           <a  href=\"[field:arcurl/]\">[field:description/]</a>【[field:pubdate function=MyDate('Y-m-d',@me)/]】<br/>\r\n           </li>\r\n           ",4920,5206);
+$z[13][4]['row']="10";
+$z[13][4]['titlelen']="24";
+$z[13][4]['orderby']="pubdate";
+$z[13][4]['typeid']="10";
+$z[13][4]['idlist']="121,120,119";
+$z[13][4]['channelid']="3";
+$z[14]=Array("global","",5869,5901);
+$z[14][4]['name']="cfg_templets_skin";
+$z[15]=Array("global","",5982,6014);
+$z[15][4]['name']="cfg_templets_skin";
+$z[16]=Array("global","",6396,6428);
+$z[16][4]['name']="cfg_templets_skin";
+
+?>
